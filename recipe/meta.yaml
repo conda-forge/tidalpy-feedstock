@@ -18,10 +18,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
-    - python
-    - numpy
-    - cython
-    - cyrk >=0.13.5
   host:
     - python
     - setuptools
