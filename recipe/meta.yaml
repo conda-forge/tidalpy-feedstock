@@ -1,5 +1,5 @@
 {% set name = "TidalPy" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tidalpy-{{ version }}.tar.gz
-  sha256: ce1075272c0d8737c1247b6c98537b87dcbe9fea6a8de3e02438bd97ad3791a7
+  sha256: 199db35b228d40793efcf20e9878eef86423fa9405934120120f1634d435cc20
 
 build:
   skip: true  # [py>=313]
