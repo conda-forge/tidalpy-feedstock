@@ -20,7 +20,7 @@ requirements:
     - {{ stdlib('c') }}
   host:
     - python
-    - python_abi ={{ python }} *_cp{{ python.replace('.', '') }}
+    - python_abi
     - setuptools
     - numpy
     - scipy
@@ -31,7 +31,7 @@ requirements:
   run:
     - python
     - numba
-    - python_abi ={{ python }} *_cp{{ python.replace('.', '') }}
+    - python_abi
     - scipy
     - platformdirs
     - toml
