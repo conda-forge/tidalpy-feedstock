@@ -22,7 +22,7 @@ requirements:
     - {{ stdlib('c') }}
     - numpy
     - cython
-    - cyrk >= 0.13.5
+    - cyrk >=0.13.5
   host:
     - python
     - setuptools
@@ -30,7 +30,7 @@ requirements:
     - scipy
     - cython
     - wheel
-    - cyrk >= 0.13.5
+    - cyrk >=0.13.5
     - pip
   run:
     - python
@@ -41,7 +41,7 @@ requirements:
     - dill
     - psutil
     - pathos
-    - cyrk >= 0.13.5
+    - cyrk >=0.13.5
     - astropy-base
     - astroquery
     - matplotlib-base
