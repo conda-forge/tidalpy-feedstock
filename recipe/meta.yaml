@@ -23,13 +23,12 @@ requirements:
     - cython
   host:
     - python
-    - setuptools >=64.0.0
-    - numpy  # empty version spec will pick up channel pinnings
-    # - numpy >=1.26,<1.27  # tidalpy specific pinnings also enforced
+    - setuptools
+    - numpy
     - scipy
     - cython
     - wheel
-    - cyrk >=0.13.5
+    - cyrk
     - pip
   run:
     - python
@@ -40,7 +39,7 @@ requirements:
     - dill
     - psutil
     - pathos
-    - cyrk >=0.13.5
+    - cyrk
     - astropy-base
     - astroquery
     - matplotlib-base
