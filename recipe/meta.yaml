@@ -1,5 +1,5 @@
 {% set name = "TidalPy" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,42 +7,44 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tidalpy-{{ version }}.tar.gz
-  sha256: ce1075272c0d8737c1247b6c98537b87dcbe9fea6a8de3e02438bd97ad3791a7
+  sha256: 199db35b228d40793efcf20e9878eef86423fa9405934120120f1634d435cc20
 
 build:
   skip: true  # [py>=313]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
+    - numpy
+    - cython
   host:
     - python
     - setuptools >=64.0.0
     - numpy  # empty version spec will pick up channel pinnings
     # - numpy >=1.26,<1.27  # tidalpy specific pinnings also enforced
-    - scipy >=1.9.3,<1.14
-    - cython >=3.0.0
-    - wheel >=0.38
-    - cyrk >=0.12.2,<0.13
+    - scipy
+    - cython
+    - wheel
+    - cyrk >=0.13.5
     - pip
   run:
     - python
-    - numba >=0.54.1
-    - scipy >=1.9.3,<1.14
-    - platformdirs >=3.11.0,<4
-    - toml >=0.10.2
-    - dill >=0.3.2
-    - psutil >=5.8.0
-    - pathos >=0.2.0
-    - cyrk >=0.12.2,<0.13
+    - numba
+    - scipy
+    - platformdirs
+    - toml
+    - dill
+    - psutil
+    - pathos
+    - cyrk >=0.13.5
     - astropy-base
     - astroquery
-    - matplotlib-base >=3.4.2
-    - ipympl >=0.9.6,<0.10.0
+    - matplotlib-base
+    - ipympl
     - cmcrameri
 
 test:
