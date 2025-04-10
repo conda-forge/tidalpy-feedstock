@@ -20,7 +20,6 @@ requirements:
     - {{ stdlib('c') }}
   host:
     - python
-    - python_abi
     - setuptools
     - numpy
     - scipy
@@ -31,7 +30,6 @@ requirements:
   run:
     - python
     - numba
-    - python_abi
     - scipy
     - platformdirs
     - toml
