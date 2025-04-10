@@ -10,7 +10,7 @@ source:
   sha256: 199db35b228d40793efcf20e9878eef86423fa9405934120120f1634d435cc20
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --no-binary cyrk
   number: 0
 
 requirements:
