@@ -10,7 +10,8 @@ source:
   sha256: 199db35b228d40793efcf20e9878eef86423fa9405934120120f1634d435cc20
 
 build:
-  skip: true  # [py>=313]
+  skip: true  # [py>=314]
+  skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -21,6 +22,7 @@ requirements:
     - {{ stdlib('c') }}
     - numpy
     - cython
+    - cyrk >= 0.13.5
   host:
     - python
     - setuptools
@@ -28,7 +30,7 @@ requirements:
     - scipy
     - cython
     - wheel
-    - cyrk
+    - cyrk >= 0.13.5
     - pip
   run:
     - python
@@ -39,7 +41,7 @@ requirements:
     - dill
     - psutil
     - pathos
-    - cyrk
+    - cyrk >= 0.13.5
     - astropy-base
     - astroquery
     - matplotlib-base
