@@ -35,9 +35,6 @@ requirements:
     - numba
     - scipy
     - platformdirs
-    - numpy
-    # - numpy <2.0  # [py<313]
-    # - numpy >=2.0  # [py>=313]
     - toml
     - dill
     - psutil
