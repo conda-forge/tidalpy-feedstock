@@ -28,7 +28,7 @@ requirements:
     - scipy
     - cython
     - wheel
-    - cyrk >=0.13.5
+    - cyrk >=0.13.5,<0.14.0
     - pip
   run:
     - python
@@ -42,7 +42,7 @@ requirements:
     - dill
     - psutil
     - pathos
-    - cyrk >=0.13.5
+    - cyrk >=0.13.5,<0.14.0
     - astropy-base
     - astroquery
     - matplotlib-base
