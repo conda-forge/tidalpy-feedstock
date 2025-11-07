@@ -18,13 +18,13 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
-    - numpy
+    - {{ pin_compatible('numpy', upper_bound='2.3') }}
     # - numpy <2.0  # [py<313]
     # - numpy >=2.0  # [py>=313]
   host:
     - python
     - setuptools
-    - numpy
+    - {{ pin_compatible('numpy', upper_bound='2.3') }}
     # - numpy <2.0  # [py<313]
     # - numpy >=2.0  # [py>=313]
     - scipy
@@ -35,6 +35,7 @@ requirements:
   run:
     - python
     - numba
+    - {{ pin_compatible('numpy', upper_bound='2.3') }}
     - scipy
     - platformdirs
     - toml
