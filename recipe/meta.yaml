@@ -1,5 +1,5 @@
 {% set name = "TidalPy" %}
-{% set version = "0.6.9" %}
+{% set version = "0.6.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tidalpy-{{ version }}.tar.gz
-  sha256: 2f04479c9d9bf2c74f143a2dacc294d834c1b36f7f303ed7bfb2d9560223a802
+  sha256: 9f1ef680d2476a9cb2f3b036aeb6ded1af30a8c9058cbc60859033d78ed4029d
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --no-binary cyrk
@@ -35,6 +35,7 @@ requirements:
   run:
     - python
     - numba
+    - numpy <2.3
     - scipy
     - platformdirs
     - toml
