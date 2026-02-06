@@ -1,5 +1,5 @@
 {% set name = "TidalPy" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tidalpy-{{ version }}.tar.gz
-  sha256: 27b1f22ab3700ef65029dad7e15501f2ec1276e7282c2a8c4c714d6b837fa09f
+  sha256: 295445b2665d30aa4aea07642796de38f9f73cc6ff4f20c35997134f24877148
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --no-binary cyrk
