@@ -1,2 +1,2 @@
-llvm-openmp:
+llvm_openmp:
   - 21.1.8
