@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tidalpy-feedsto
 
 Home: www.tidalpy.info/
 
-Package license: CC-BY-SA-4.0
+Package license: Apache-2.0
 
 Summary: Tidal Dynamics and Thermal-Orbital Evolution Software Suite Implemented in Cython and Python
 
