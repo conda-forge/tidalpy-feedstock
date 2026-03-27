@@ -28,7 +28,7 @@ requirements:
     - scipy
     - cython
     - wheel
-    - cyrk
+    - cyrk >= 0.17.1
     - pip
     - vcomp14      # [win]
     - llvm-openmp  # [osx]
