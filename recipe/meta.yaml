@@ -1,5 +1,5 @@
 {% set name = "TidalPy" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,20 +7,18 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tidalpy-{{ version }}.tar.gz
-  sha256: 27b1f22ab3700ef65029dad7e15501f2ec1276e7282c2a8c4c714d6b837fa09f
+  sha256: cba04f96a7f87fb8bd514eb22891baa4a56f554b353c8794c237cbcd737fdb78
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --no-binary cyrk
   number: 0
+  skip: true  # [py<39]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
-    - numpy
-    # - numpy <2.0  # [py<313]
-    # - numpy >=2.0  # [py>=313]
   host:
     - python
     - setuptools
@@ -30,8 +28,11 @@ requirements:
     - scipy
     - cython
     - wheel
-    - cyrk >=0.15.1,<0.16.0
+    - cyrk
     - pip
+    - vcomp14      # [win]
+    - llvm-openmp  # [osx]
+    - libgomp      # [linux]
   run:
     - python
     - numba
@@ -42,12 +43,15 @@ requirements:
     - dill
     - psutil
     - pathos
-    - cyrk >=0.15.1,<0.16.0
+    - cyrk
     - astropy-base
     - astroquery
     - matplotlib-base
     - ipympl
     - cmcrameri
+    - vcomp14      # [win]
+    - llvm-openmp  # [osx]
+    - libgomp      # [linux]
 
 test:
   imports:
@@ -66,7 +70,7 @@ about:
     The RaidalSolver package includes tools to calculate a planet or moon's "Love" numbers.
     The Tides package includes tools to estimate tidal heating and spin-orbit evolution including the effects from
     higher-order eccentricity and obliquity terms which are often left out of other models. 
-  license: CC-BY-SA-4.0
+  license: Apache-2.0
   license_file: LICENSE.md
   doc_url: https://github.com/jrenaud90/TidalPy/tree/main/Documentation
   dev_url: https://github.com/jrenaud90/TidalPy
