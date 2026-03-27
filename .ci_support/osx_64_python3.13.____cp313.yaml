@@ -19,7 +19,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '19'
 llvm_openmp:
-- '19'
+- 21.1.8
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
