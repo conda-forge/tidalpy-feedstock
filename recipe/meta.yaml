@@ -28,7 +28,7 @@ requirements:
     - scipy
     - cython
     - wheel
-    - cyrk >= 0.17.1
+    - cyrk >=0.17.1
     - pip
     - vcomp14      # [win]
     - llvm-openmp  # [osx]
@@ -43,7 +43,7 @@ requirements:
     - dill
     - psutil
     - pathos
-    - cyrk
+    - cyrk >=0.17.1
     - astropy-base
     - astroquery
     - vcomp14      # [win]
