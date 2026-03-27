@@ -47,7 +47,6 @@ requirements:
     - astropy-base
     - astroquery
     - matplotlib-base
-    - ipympl
     - cmcrameri
     - vcomp14      # [win]
     - llvm-openmp  # [osx]
