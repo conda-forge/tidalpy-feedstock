@@ -1,14 +1,13 @@
 {% set name = "TidalPy" %}
-{% set version = "0.7.6" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/tidalpy-{{ version }}.tar.gz
-  # Replace with the sha256 of the version's sdist on PyPI.
-  sha256: 833c89ac6498c3d3e2dc927fb0ce544e6970c0903b7390f8433b506db35e5ac7
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tidalpy-{{ version }}.tar.gz
+  sha256: 96f61dfc3b63c4cb468a1e1d553e3d9b7e90e632151b9ca20d80913b4b880707
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -27,38 +26,33 @@ requirements:
     - scipy
     - cython
     - wheel
-    - cyrk >=0.19.0,<0.20.0
+    - cyrk >=0.20.0,<0.21.0
     - pip
   run:
     - python
-    - numba
     - numpy
     - scipy
     - platformdirs
     - toml
-    - dill
-    - psutil
-    - pathos
-    - cyrk >=0.19.0,<0.20.0
-    - astropy-base
-    - astroquery
+    - tqdm >=4.64
+    - cyrk >=0.20.0,<0.21.0
     - matplotlib-base >=3.4.2
 
 test:
   imports:
     - TidalPy
   commands:
-    - python -c "import TidalPy; from TidalPy.RadialSolver import radial_solver; from TidalPy.structures import build_world; print(TidalPy.__version__)"
+    - python -c "import TidalPy; from TidalPy.RadialSolver import radial_solver; from TidalPy.Structures import build_world; print(TidalPy.__version__)"
     - pip check
   requires:
     - pip
 
 about:
   home: www.tidalpy.info/
-  summary: Tidal Dynamics and Thermal-Orbital Evolution Software Suite Implemented in Cython and Python
+  summary: Tidal Dynamics and Thermal-Orbital Evolution Software Suite Implemented in C++, Cython, and Python
   description: |
     TidalPy provides efficient tools to estimate tidal dissipation within rocky and icy worlds.
-    The RaidalSolver package includes tools to calculate a planet or moon's "Love" numbers.
+    The RadialSolver package includes tools to calculate a planet or moon's "Love" numbers.
     The Tides package includes tools to estimate tidal heating and spin-orbit evolution including the effects from
     higher-order eccentricity and obliquity terms which are often left out of other models. 
   license: Apache-2.0
