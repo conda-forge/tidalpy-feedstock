@@ -7,14 +7,14 @@ Home: www.tidalpy.info/
 
 Package license: Apache-2.0
 
-Summary: Tidal Dynamics and Thermal-Orbital Evolution Software Suite Implemented in Cython and Python
+Summary: Tidal Dynamics and Thermal-Orbital Evolution Software Suite Implemented in C++, Cython, and Python
 
 Development: https://github.com/jrenaud90/TidalPy
 
 Documentation: https://github.com/jrenaud90/TidalPy/tree/main/Documentation
 
 TidalPy provides efficient tools to estimate tidal dissipation within rocky and icy worlds.
-The RaidalSolver package includes tools to calculate a planet or moon's "Love" numbers.
+The RadialSolver package includes tools to calculate a planet or moon's "Love" numbers.
 The Tides package includes tools to estimate tidal heating and spin-orbit evolution including the effects from
 higher-order eccentricity and obliquity terms which are often left out of other models.
 
