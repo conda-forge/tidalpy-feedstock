@@ -1,13 +1,13 @@
 {% set name = "TidalPy" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tidalpy-{{ version }}.tar.gz
-  sha256: 96f61dfc3b63c4cb468a1e1d553e3d9b7e90e632151b9ca20d80913b4b880707
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/tidalpy-{{ version }}.tar.gz
+  sha256: 5eb054a7fc9177229becd25cf9eba8199d663d510ee0906e564d005f508296dd
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
